@@ -1,46 +1,24 @@
----
-title: MobileSAM
-emoji: 🐠
-colorFrom: indigo
-colorTo: yellow
-sdk: gradio
-python_version: 3.8.10
-sdk_version: 3.35.2
-app_file: app.py
-pinned: false
-license: apache-2.0
----
 
-# Faster Segment Anything(MobileSAM)
+# Se uso el modelo de Faster Segment Anything(MobileSAM)
 
-Demo of official PyTorch implementation of [MobileSAM](https://github.com/ChaoningZhang/MobileSAM).
-
-
-**MobileSAM** performs on par with the original SAM (at least visually) and keeps exactly the same pipeline as the original SAM except for a change on the image encoder.
-Specifically, we replace the original heavyweight ViT-H encoder (632M) with a much smaller Tiny-ViT (5M). On a single GPU, MobileSAM runs around 12ms per image: 8ms on the image encoder and 4ms on the mask decoder. 
+La aplicación original fue obtenida de: [MobileSAM](https://github.com/ChaoningZhang/MobileSAM).
 
 ## To run on local PC
-First, mobile_sam must be installed to run on pc. Refer to [Installation Instruction](https://github.com/dhkim2810/MobileSAM/tree/master#installation)
+Para seguir el proceso de instalación se siguiron las siguientes instrucciones: [Instrucciones de instalación](https://github.com/dhkim2810/MobileSAM/tree/master#installation)
 
-Then run the following
+Finalmente se ejecutó lo siguiente:
 
 ```
 python app.py
 ```
 
-## License
+## Agradacimientos
 
-The model is licensed under the [Apache 2.0 license](LICENSE).
+- [Segment Anything](https://segment-anything.com/) brindo el dataset inicial.
+- [TinyViT](https://github.com/microsoft/Cream/tree/main/TinyViT) brindo el código y el modelo preentrenado.
+- [MobileSAM](https://github.com/ChaoningZhang/MobileSAM) por desarrollar las bases de la aplicación aquí presente.
 
-
-## Acknowledgement
-
-- [Segment Anything](https://segment-anything.com/) provides the SA-1B dataset and the base codes.
-- [TinyViT](https://github.com/microsoft/Cream/tree/main/TinyViT) provides codes and pre-trained models.
-
-## Citing MobileSAM
-
-If you find this project useful for your research, please consider citing the following BibTeX entry.
+## Cita de MobileSAM
 
 ```bibtex
 @article{mobile_sam,
